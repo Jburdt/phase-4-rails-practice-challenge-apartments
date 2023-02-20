@@ -1,10 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "Seeding Data!"
+puts "Destroying Data!"
+
+Apartment.destroy_all
+Tenant.destroy_all
+Lease.destroy_all
 
 a1 = Apartment.create(number: 4109)
 a2 = Apartment.create(number: 1107)
@@ -28,3 +27,5 @@ Lease.create(apartment_id: a4.id, tenant_id: t4.id, rent: 3200)
 Lease.create(apartment_id: a5.id, tenant_id: t5.id, rent: 4200)
 Lease.create(apartment_id: a3.id, tenant_id: t4.id, rent: 5020)
 Lease.create(apartment_id: a4.id, tenant_id: t1.id, rent: 1100)
+
+puts 'Done Seeding!'
